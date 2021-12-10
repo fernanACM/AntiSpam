@@ -1,7 +1,7 @@
 # AntiSpamPro
 **Antispam plugin with configurable delay, profanity filter (block swear words), automatic actions (kick, ban) and commands to change settings on the fly in console or in game.**
 
-<a href="https://poggit.pmmp.io/p/SizeUI"><img src="https://poggit.pmmp.io/shield.api/SizeUI"></a>
+<a href="https://discord.gg/YyE9XFckqb"><img src="https://img.shields.io/discord/837701868649709568?label=discord&color=7289DA&logo=discord" alt="Discord" /></a>
 
 ### Implementations
 * Bug fixes and update to new API 4.0.
