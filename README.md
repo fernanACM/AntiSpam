@@ -63,6 +63,7 @@
 
 ### Commands
 /asp - display the current AntiSpamPro settings
+
 /asp set {1, 2 or 3} - change the allowed delay between chat to 1, 2 or 3 seconds.
 
 ### Permissions
