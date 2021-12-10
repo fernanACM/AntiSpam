@@ -1,0 +1,23 @@
+name: AntiSpamPro
+main: fernanACM\AntiSpamPro\AntiSpam
+api: 4.0.0
+version: 2.0.0
+description: AntiSpam for PocketMine-MP 4.0
+authors: [fernanACM, awzaw]
+
+commands:
+ asp:
+  permission: asp.command
+  description: "Change AntiSpamPro Settings"
+  usage: "/asp [help || kick || ban || set <cooldown in secs)>]"
+permissions:
+  asp:
+    default: op
+    description: "Allows access to all ASP commands and bypass filter"
+    children:
+  asp.command:
+    default: op
+    description: "Allows access to all ASP commands"
+  asp.bypass:
+    default: op
+    description: "Allows user to bypass ASP filter"
