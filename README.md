@@ -63,15 +63,6 @@
 
 ### Commands
 /asp - display the current AntiSpamPro settings
-
-/asp kick - kick spammers
-
-/asp ban - ban spammers
-
-/asp banip - banip and ban spammers
-
-/asp bancid - ban, banip and bancid spammers (if available)
-
 /asp set {1, 2 or 3} - change the allowed delay between chat to 1, 2 or 3 seconds.
 
 ### Permissions
