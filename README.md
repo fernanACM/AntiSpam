@@ -1,6 +1,7 @@
 # AntiSpamPro
 **Antispam plugin with configurable delay, profanity filter (block swear words), automatic actions (kick, ban) and commands to change settings on the fly in console or in game.**
 
+![Captura de pantalla 2021-12-10 002457](https://user-images.githubusercontent.com/83558341/145521945-b1255cff-5ef2-4dfc-b1fd-303d10ef314f.png)
 <a href="https://discord.gg/YyE9XFckqb"><img src="https://img.shields.io/discord/837701868649709568?label=discord&color=7289DA&logo=discord" alt="Discord" /></a>
 
 ### Implementations
