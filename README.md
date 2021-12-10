@@ -13,7 +13,7 @@
    #    /_\    _ _   | |_  (_) / __|  _ __   __ _   _ __   | _ \  _ _   ___ 
    #   / _ \  | ' \  |  _| | | \__ \ | '_ \ / _` | | '  \  |  _/ | '_| / _ \
    #  /_/ \_\ |_||_|  \__| |_| |___/ | .__/ \__,_| |_|_|_| |_|   |_|   \___/
-           By fernanACM and awzaw    |_|                                    
+   #       By fernanACM and awzaw    |_|                                    
             
    #The delay is the minimum time in seconds allowed between chats, including warnings.
    #message to be sent if the player is sending spam
@@ -57,6 +57,7 @@
    AntiSwearWords: true
    AntiRudeNames: true
 ```
+
 ### Commands
 /asp - display the current AntiSpamPro settings
 
