@@ -39,10 +39,10 @@
    # Chat sanctions
    Action: "kick" # kick or ban
    kick-Message: "§cDon't spam, next time it will be a more drastic penalty"
-   Setkick-Message: "Spammers will be kicked"
-   SetBan-Message: "Spammers will be banned"
-   SetBan-IpMessage: "Spammers will be IP banned"
-   SetBancid-Message: "Spammers will be CID banned"
+   SetKickMessage: "Spammers will be kicked"
+   SetBanMessage: "Spammers will be banned"
+   SetBanipMessage: "Spammers will be IP banned"
+   SetBancidMessage: "Spammers will be CID banned"
    Ban-Message: "No Spam"
 
    # Warnings Messages
@@ -50,10 +50,8 @@
    Last-Warning: "CAREFUL... LAST WARNING"
 
    # Help Message
-   help1: "/asp kick    set the punishment to kick"
-   help2: "/asp ban     set the punishment to ban"
-   help3: "/asp set 2   set minimum delay (1,2 or 3)"
-   help4: "/asp         display the current minimum delay"
+   help: "/asp help"
+   help2: "/asp set 2 (set minimum delay (1,2 or 3)"
 
    # Rude filter
    Swear-Message: "No Swear Words Allowed"
