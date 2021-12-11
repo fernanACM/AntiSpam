@@ -26,8 +26,7 @@ class AntiSpam extends PluginBase implements CommandExecutor, Listener {
     private $players = [];
     public $FilterPro;
 
-    public function onEnable(): void
-    {
+    public function onEnable(): void{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveDefaultConfig();
         if ($this->getConfig()->get("AntiSwearWords") || $this->getConfig()->get("AntiRudeNames")) {
@@ -36,7 +35,7 @@ class AntiSpam extends PluginBase implements CommandExecutor, Listener {
         }
     }
 
-    public function onChat(PlayerChatEvent $e) {
+    public function onChat(PlayerChatEvent $e): void{
         if ($e->isCancelled() || ($player = $e->getPlayer())->isClosed() || $player->hasPermission("asp.bypass")) return;
         if (isset($this->players[spl_object_hash($player)]) && (time() - $this->players[spl_object_hash($player)]["time"] <= intval($this->getConfig()->get("Cooldown")))) {
             $this->players[spl_object_hash($player)]["time"] = time();
@@ -82,6 +81,7 @@ class AntiSpam extends PluginBase implements CommandExecutor, Listener {
             $this->players[spl_object_hash($player)] = array("time" => time(), "warnings" => 0);
             if ($this->getConfig()->get("AntiSwearWords") && $this->FilterPro->hasProfanity($e->getMessage())) {
                 $player->sendMessage($this->getConfig()->get("Prefix") . $this->getConfig()->get("Swear-Message"));
+                PluginUtils::PlaySound($player, "random.burp", 1, 1.5);
                 $e->cancel();
             }
         }
@@ -102,15 +102,13 @@ class AntiSpam extends PluginBase implements CommandExecutor, Listener {
             case "help":
 
                 if ($sender instanceof Player) {
-                    $sender->sendMessage(TEXTFORMAT::YELLOW . $this->getConfig()->get("help1"));
-                    $sender->sendMessage(TEXTFORMAT::YELLOW . $this->getConfig()->get("help2"));
-                    $sender->sendMessage(TEXTFORMAT::YELLOW . $this->getConfig()->get("help3"));
-                    $sender->sendMessage(TEXTFORMAT::YELLOW . $this->getConfig()->get("help4"));
+                    $sender->sendMessage("§l§b=====(§cAntiSpamPro§b)=====");
+                    $sender->sendMessage($this->getConfig()->get("help"));
+                    $sender->sendMessage($this->getConfig()->get("help2"));
+                    $sender->sendMessage("§l§b===========================");
                 } else {
-                    $this->getLogger()->info($this->getConfig()->get("help1"));
+                    $this->getLogger()->info($this->getConfig()->get("help"));
                     $this->getLogger()->info($this->getConfig()->get("help2"));
-                    $this->getLogger()->info($this->getConfig()->get("help3"));
-                    $this->getLogger()->info($this->getConfig()->get("help4"));
                 }
 
                 return true;
@@ -122,7 +120,7 @@ class AntiSpam extends PluginBase implements CommandExecutor, Listener {
                 $this->getConfig()->save();
 
                 if ($sender instanceof Player) {
-                    $sender->sendMessage(TEXTFORMAT::GREEN . $this->getConfig()->get("Set" . strtolower($args[0]) . "kick-Message"));
+                    $sender->sendMessage(TEXTFORMAT::GREEN . $this->getConfig()->get("Set" . strtolower($args[0]) . "KickMessage"));
                 } else {
                     $this->getLogger()->info($this->getConfig()->get("Set" . strtolower($args[0]) . "Message"));
                 }
@@ -163,7 +161,7 @@ class AntiSpam extends PluginBase implements CommandExecutor, Listener {
      * @priority LOWEST
      */
 
-    public function onPlayerCommand(PlayerCommandPreprocessEvent $event) {
+    public function onPlayerCommand(PlayerCommandPreprocessEvent $event): void{
         if ($event->isCancelled() || $event->getPlayer()->isClosed()) return;
         if (($sender = $event->getPlayer())->hasPermission("asp.bypass")) return;
         $message = $event->getMessage();
@@ -214,19 +212,16 @@ class AntiSpam extends PluginBase implements CommandExecutor, Listener {
         }
     }
 
-    public function onQuit(PlayerQuitEvent $e)
-    {
+    public function onQuit(PlayerQuitEvent $e): void{
         if (isset($this->players[spl_object_hash($e->getPlayer())])) {
             unset($this->players[spl_object_hash($e->getPlayer())]);
         }
     }
 
-    public function onLogin(PlayerLoginEvent $e)
-    {
+    public function onLogin(PlayerLoginEvent $e): void{
         if ($e->isCancelled() || $e->getPlayer()->isClosed()) return;
         if ($this->getConfig()->get("AntiRudeNames") && $this->FilterPro->hasProfanity($e->getPlayer()->getName())) {
             $e->getPlayer()->kick("No Rude Names Allowed");
-            PluginUtils::PlaySound($player, "random.burp", 1, 1.5);
             $e->cancel();
         }
     }
