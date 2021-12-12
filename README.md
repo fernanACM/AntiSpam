@@ -1,4 +1,11 @@
 # AntiSpamPro
+
+[![](https://poggit.pmmp.io/shield.state/AntiSpam)](https://poggit.pmmp.io/p/AntiSpam)
+<a href="https://poggit.pmmp.io/p/AntiSpam"><img src="https://poggit.pmmp.io/shield.state/AntiSpam"></a>
+
+[![](https://poggit.pmmp.io/shield.api/AntiSpam)](https://poggit.pmmp.io/p/AntiSpam)
+<a href="https://poggit.pmmp.io/p/AntiSpam"><img src="https://poggit.pmmp.io/shield.api/AntiSpam"></a>
+
 **Antispam plugin with configurable delay, profanity filter (block swear words), automatic actions (kick, ban) and commands to change settings on the fly in console or in game.**
 
 ![Captura de pantalla 2021-12-10 002457](https://user-images.githubusercontent.com/83558341/145521945-b1255cff-5ef2-4dfc-b1fd-303d10ef314f.png)
