@@ -21,7 +21,7 @@ use pocketmine\Server;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 
-class AntiSpam extends PluginBase implements CommandExecutor, Listener {
+class Spam extends PluginBase implements CommandExecutor, Listener {
 
     private $players = [];
     public $FilterPro;
