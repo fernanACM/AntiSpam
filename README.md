@@ -11,6 +11,8 @@
 ![Captura de pantalla 2021-12-10 002457](https://user-images.githubusercontent.com/83558341/145521945-b1255cff-5ef2-4dfc-b1fd-303d10ef314f.png)
 <a href="https://discord.gg/YyE9XFckqb"><img src="https://img.shields.io/discord/837701868649709568?label=discord&color=7289DA&logo=discord" alt="Discord" /></a>
 
+**This is the updated version of 'AntiSpamPro', I am not the original author, Awzaw is the creator of this plugin.**
+
 ### Implementations
 * Bug fixes and update to new API 4.0.
 * Sounds in chat.
@@ -19,10 +21,10 @@
 
 ### Config
 ```yaml
-   #     _            _     _   ___                         ___             
-   #    /_\    _ _   | |_  (_) / __|  _ __   __ _   _ __   | _ \  _ _   ___ 
-   #   / _ \  | ' \  |  _| | | \__ \ | '_ \ / _` | | '  \  |  _/ | '_| / _ \
-   #  /_/ \_\ |_||_|  \__| |_| |___/ | .__/ \__,_| |_|_|_| |_|   |_|   \___/
+   #     _            _     _   ___                                
+   #    /_\    _ _   | |_  (_) / __|  _ __   __ _   _ __   
+   #   / _ \  | ' \  |  _| | | \__ \ | '_ \ / _` | | '  \  
+   #  /_/ \_\ |_||_|  \__| |_| |___/ | .__/ \__,_| |_|_|_|
    #       By fernanACM and awzaw    |_|                                    
             
    #The delay is the minimum time in seconds allowed between chats, including warnings.
