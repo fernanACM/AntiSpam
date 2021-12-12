@@ -1,4 +1,4 @@
-# AntiSpamPro
+# AntiSpam
 
 [![](https://poggit.pmmp.io/shield.state/AntiSpam)](https://poggit.pmmp.io/p/AntiSpam)
 <a href="https://poggit.pmmp.io/p/AntiSpam"><img src="https://poggit.pmmp.io/shield.state/AntiSpam"></a>
